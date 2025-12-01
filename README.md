@@ -1,8 +1,8 @@
 # EXAMEN PRÁCTICO FINAL — MONITOREO Y OBSERVABILIDAD
 
-**Autor:** Fabian Santibañez S.
-**Fecha:** 09/12/2025
-**Curso:** Monitoreo y Observabilidad
+**Autor:** Fabian Santibañez S.  
+**Fecha:** 09/12/2025  
+**Curso:** Monitoreo y Observabilidad  
 
 ---
 
