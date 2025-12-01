@@ -1,31 +1,23 @@
-# [Nombre de la Evaluación / Proyecto]
+# [EXAMEN PRÁCTICO FINAL — MONITOREO Y OBSERVABILIDAD]
 
 **Autor:** Fabian Santibañez S. 
-**Fecha:** [Fecha de entrega]  
-**Curso/Asignatura:** [Nombre de la asignatura]
+**Fecha:** 09/12/2025
+**Curso:** Monitoreo y Observabilidad
 
 ---
 
 ## 📋 Descripción
-Breve descripción de qué trata esta evaluación. Explica el objetivo principal (ej: "Desplegar un servidor web", "Automatizar una tarea con Python", "Resolver un reto CTF").
+Implementar un entorno de observabilidad integral basado en Prometheus Cloud, Grafana Cloud y AWS CloudWatch,
+demostrando el monitoreo de infraestructura, aplicación, métricas personalizadas y costos, junto con la documentación del proceso.
 
-## 🛠️ Requisitos Previos
-Lista de herramientas, software o conocimientos necesarios para realizar o evaluar este proyecto.
 
-* Sistema Operativo: [Ej: Ubuntu 22.04 / Windows 10]
-* Lenguajes: [Ej: Python 3.9+, Node.js]
-* Herramientas: [Ej: Docker, Git, Wireshark]
-* Credenciales: [Si aplica, indica si se necesitan claves API o accesos específicos]
+## 🚀 Item I - Prometheus Cloud + Grafana Cloud para EC2
 
----
-
-## 🚀 Instalación y Configuración
-
-Pasos necesarios para preparar el entorno antes de iniciar la evaluación propiamente tal.
+Pasos necesarios para preparar el entorno.
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone [https://github.com/usuario/repo.git](https://github.com/usuario/repo.git)
+    git clone https://github.com/usuario/repo.git
     cd repo
     ```
 
@@ -49,4 +41,15 @@ Explicación de lo que se hizo. Sé específico con los comandos utilizados.
 
 Comando ejecutado:
 ```bash
-[Comando exacto aquí]
+aaaa
+    ```
+
+---
+
+## 🛠️ Requisitos Técnicos
+Lista de herramientas, software o conocimientos necesarios para realizar o evaluar este proyecto.
+
+* Servidor Debian EC2
+* Grafana Cloud 
+
+---
