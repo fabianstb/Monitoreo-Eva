@@ -1,0 +1,52 @@
+{
+    "widgets": [
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 6,
+            "properties": {
+                "sparkline": true,
+                "view": "singleValue",
+                "metrics": [
+                    [ "AWS/EC2", "CPUUtilization", "InstanceId", "i-032d3abc7de260cae" ]
+                ],
+                "region": "us-east-1",
+                "title": "CPU Utilizada"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 6,
+            "y": 0,
+            "width": 6,
+            "height": 6,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": false,
+                "metrics": [
+                    [ "AWS/EC2", "NetworkPacketsIn", "InstanceId", "i-032d3abc7de260cae" ],
+                    [ ".", "NetworkPacketsOut", ".", "." ]
+                ],
+                "region": "us-east-1",
+                "title": "Trafico de Entrada y Salida"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 12,
+            "y": 0,
+            "width": 6,
+            "height": 6,
+            "properties": {
+                "view": "bar",
+                "metrics": [
+                    [ "AWS/EC2", "EBSWriteBytes", "InstanceId", "i-032d3abc7de260cae" ]
+                ],
+                "region": "us-east-1",
+                "title": "Bytes Escritos"
+            }
+        }
+    ]
+}
