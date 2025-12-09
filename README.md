@@ -109,6 +109,8 @@ registry.hospital_med_supplies_remaining_gauge = Gauge(
     registry=registry
 )
 ```
+![Acción Reboot](Item%20II/Dashboard%20-%20Personalizado.png)
+
 ---
 
 ## 🚀 Item III - Monitoreo con AWS CloudWatch
