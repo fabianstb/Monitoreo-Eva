@@ -189,7 +189,7 @@ Esta implementación cubre el pilar de **"Informar"** y **"Operar"** de FinOps.
 *Configuración del umbral y acción de notificación:*
 ![Condiciones Alarma](Item%20IV/Condición-de-Alarma.png)
 
-## 7. Conclusión Personal
+## 7. Conclusión
 
 Al finalizar este examen práctico, he comprendido que la observabilidad va mucho más allá de simplemente tener gráficos bonitos en una pantalla; se trata de tener el control real sobre lo que sucede.
 
