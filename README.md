@@ -118,7 +118,9 @@ registry.hospital_med_supplies_remaining_gauge = Gauge(
 ## 🚀 Item III - Monitoreo con AWS CloudWatch
 
 ### 1. Dashboard de Infraestructura
-Se importó el archivo `Item III/dashboard.json` para crear un panel de control que visualiza métricas críticas desde la perspectiva de AWS:
+Se diseñó manualmente un panel de control en la consola de AWS para visualizar métricas críticas. Posteriormente, se exportó la definición del dashboard (`Item III/dashboard.json`) para fines de respaldo y versionamiento.
+
+El dashboard incluye:
 * **CPU Utilization:** Visualización tipo "Gauge" para lectura rápida de carga.
 * **Network In/Out:** Gráfico de series de tiempo para correlacionar tráfico.
 * **EBS Write Bytes:** Gráfico de barras para monitorear la intensidad de escritura en disco.
@@ -138,6 +140,9 @@ Se configuró una alarma llamada `AlarmaNetwork` para detectar anomalías de tr�
 
 *Alarma creada exitosamente:*
 ![Alarma Estado](Item%20III/Alarma-5.png)
+
+*Notificación por correo:*
+![Alarma Estado](Item%20III/Notificación-Correo.png)
 ---
 
 ## 🚀 Item IV - Observabilidad de Costos
