@@ -60,14 +60,24 @@ Uso de CPU (Rate 5m): Muestra la velocidad de consumo de CPU del contenedor.
 ```
 rate(container_cpu_usage_seconds_total{instance="localhost:8080"}[5m])
 ```
+![Acción Reboot](Item%20I/Metrica%201%20-%20Item%20I.png)
+
 Uso de Memoria: Muestra la memoria actual consumida.
 ```
 container_memory_usage_bytes{instance="localhost:8080"}
 ```
+![Acción Reboot](Item%20I/Metrica%202%20-%20Item%20I.png)
+
 Tráfico de Red: Muestra la tasa de bytes recibidos.
 ```
 rate(container_network_receive_bytes_total{instance="localhost:8080"}[5m])
 ```
+![Acción Reboot](Item%20I/Metrica%203%20-%20Item%20I.png)
+
+**3. Alerta Visual Threshold .**
+
+![Acción Reboot](Item%20I/Threshold%20-%20Item%20I.png)
+
 ---
 
 ## 🚀 Item II - Métricas Personalizadas
