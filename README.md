@@ -6,7 +6,7 @@
 
 ---
 
-## 📋 Descripción
+##  Descripción
 Implementar un entorno de observabilidad integral basado en Prometheus Cloud, Grafana Cloud y AWS CloudWatch,
 demostrando el monitoreo de infraestructura, aplicación, métricas personalizadas y costos, junto con la documentación del proceso.
 
@@ -15,12 +15,12 @@ demostrando el monitoreo de infraestructura, aplicación, métricas personalizad
 * **Prometheus Cloud:** Almacenamiento y consulta de series temporales.
 * **Grafana Cloud:** Visualización unificada y alertas.
 * **AWS CloudWatch:** Monitoreo nativo de servicios AWS.
-* **Python:** Lenguaje utilizado para la instrumentación de métricas personalizadas (`prometheus_client`).
+* **Python:** Lenguaje utilizado para la instrumentación de métricas personalizadas `prometheus_client`.
 * **Node Exporter:** Agente de recolección de métricas de sistema operativo.
 
 ---
 
-## 🚀 Item I - Prometheus Cloud + Grafana Cloud para EC2
+##  Item I - Prometheus Cloud + Grafana Cloud para EC2
 En esta sección se implementó la recolección de métricas de la instancia EC2 y los contenedores que ejecutan la aplicación. Se utilizó **Grafana Alloy** como agente colector para enviar los datos a **Grafana Cloud**.
 
 ### 1. Configuración del Agente Grafana Alloy
@@ -56,19 +56,19 @@ prometheus.scrape "extra_exporters" {
 **2. Dashboard y Consultas PromQL**
 Se diseñó un Dashboard en Grafana Cloud para visualizar el rendimiento de los contenedores. Las consultas utilizadas (Item I/queries.txt) son:
 
-Uso de CPU (Rate 5m): Muestra la velocidad de consumo de CPU del contenedor.
+Muestra la velocidad de consumo de CPU del contenedor.
 ```
 rate(container_cpu_usage_seconds_total{instance="localhost:8080"}[5m])
 ```
 ![Acción Reboot](Item%20I/Metrica%201%20-%20Item%20I.png)
 
-Uso de Memoria: Muestra la memoria actual consumida.
+Uso de Memoria.
 ```
 container_memory_usage_bytes{instance="localhost:8080"}
 ```
 ![Acción Reboot](Item%20I/Metrica%202%20-%20Item%20I.png)
 
-Tráfico de Red: Muestra la tasa de bytes recibidos.
+Muestra la tasa de bytes recibidos.
 ```
 rate(container_network_receive_bytes_total{instance="localhost:8080"}[5m])
 ```
@@ -80,7 +80,7 @@ rate(container_network_receive_bytes_total{instance="localhost:8080"}[5m])
 
 ---
 
-## 🚀 Item II - Métricas Personalizadas
+##  Item II - Métricas Personalizadas
 
 Para demostrar la capacidad de instrumentar aplicaciones y generar métricas de negocio personalizadas, se utilizó un simulador de gestión hospitalaria en Python (`Item II/Case-3-Mod.py`).
 
@@ -115,7 +115,7 @@ registry.hospital_med_supplies_remaining_gauge = Gauge(
 
 ---
 
-## 🚀 Item III - Monitoreo con AWS CloudWatch
+##  Item III - Monitoreo con AWS CloudWatch
 
 ### 1. Dashboard de Infraestructura
 Se diseñó manualmente un panel de control en la consola de AWS para visualizar métricas críticas. Posteriormente, se exportó la definición del dashboard (`Item III/dashboard.json`) para fines de respaldo y versionamiento.
@@ -146,6 +146,29 @@ Se configuró una alarma llamada `AlarmaNetwork` para detectar anomalías de tr�
 
 ---
 
-## 🚀 Item IV - Observabilidad de Costos
+##  Item IV - Observabilidad de Costos
 
+Se implementó un sistema de alertas de facturación utilizando métricas nativas de **AWS CloudWatch Billing**.
 
+### 1. Configuración de la Alerta
+Se configuró una alarma proactiva sobre la métrica `EstimatedCharges`.
+
+**Detalles de la configuración:**
+* **Métrica:** `EstimatedCharges` (Namespace: AWS/Billing).
+* **Condición:** Se activa si el costo estimado supera los **150 USD** en un periodo de 6 horas.
+* **Acción:** Envío de notificación vía SNS.
+
+### 2. Integración con la metodología FinOps
+Esta implementación cubre el pilar de **"Informar"** y **"Operar"** de FinOps.
+
+1.  **Visibilidad en Tiempo Real:** Permite al equipo de ingeniería ver el impacto económico de sus despliegues directamente en el mismo dashboard donde ven el rendimiento de CPU/Memoria.
+2.  **Detección de Anomalías:** La alarma actúa como un Cortacircuitos. Si existe un error en los  servidores o un exceso de uso, la métrica de costo subirá rápidamente, disparando la alerta y permitiendo detener el problema en cuestión de horas, no semanas.
+3.  **Cultura de Costos:** Al integrar métricas de dinero junto a métricas técnicas, se fomenta que el costo sea considerado un requisito no funcional más de la arquitectura.
+
+**Evidencia de Configuración:**
+
+*Vista previa de la métrica de Costo Estimado:*
+![Alarma Costos](Item%20IV/Alarma-Costos.png)
+
+*Configuración del umbral y acción de notificación:*
+![Condiciones Alarma](Item%20IV/Condición-de-Alarma.png)
