@@ -111,6 +111,7 @@ registry.hospital_med_supplies_remaining_gauge = Gauge(
 ```
 
 **Metricas Utilizadas**
+
 Tiempos de espera.
 ```
 sum(rate(hospital_er_wait_time_minutes_histogram_bucket[5m])) by (le)
