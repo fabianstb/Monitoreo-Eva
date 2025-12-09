@@ -188,3 +188,13 @@ Esta implementación cubre el pilar de **"Informar"** y **"Operar"** de FinOps.
 
 *Configuración del umbral y acción de notificación:*
 ![Condiciones Alarma](Item%20IV/Condición-de-Alarma.png)
+
+## 7. Conclusión Personal
+
+Al finalizar este examen práctico, he comprendido que la observabilidad va mucho más allá de simplemente tener gráficos bonitos en una pantalla; se trata de tener el control real sobre lo que sucede.
+
+Desde el punto de vista **operativo**, lo más valioso fue implementar la automatización. Al configurar la alarma en CloudWatch que reinicia la instancia automáticamente ante fallos de red, entendí cómo podemos dejar de ser "vigilantes" de pantallas para pasar a construir sistemas resilientes que se recuperan solos. Esto reduce drásticamente el tiempo de caída y mi carga de trabajo manual.
+
+Por el lado de **FinOps y Costos**, integrar la alerta de facturación fue revelador. Me permitió ver que el presupuesto es una métrica técnica más, tan crítica como la CPU o la memoria. Configurar esta alerta me da la tranquilidad de experimentar e innovar, sabiendo que si cometo un error de configuración que dispare los recursos, el sistema me avisará inmediatamente antes de generar un sobrecosto sorpresivo.
+
+En resumen, este laboratorio me demostró que una buena estrategia de monitoreo no solo protege la infraestructura, sino también el bolsillo del negocio.
