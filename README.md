@@ -57,13 +57,16 @@ prometheus.scrape "extra_exporters" {
 Se diseñó un Dashboard en Grafana Cloud para visualizar el rendimiento de los contenedores. Las consultas utilizadas (Item I/queries.txt) son:
 
 Uso de CPU (Rate 5m): Muestra la velocidad de consumo de CPU del contenedor.
-```rate(container_cpu_usage_seconds_total{instance="localhost:8080"}[5m])
+```
+rate(container_cpu_usage_seconds_total{instance="localhost:8080"}[5m])
 ```
 Uso de Memoria: Muestra la memoria actual consumida.
-```container_memory_usage_bytes{instance="localhost:8080"}
+```
+container_memory_usage_bytes{instance="localhost:8080"}
 ```
 Tráfico de Red: Muestra la tasa de bytes recibidos.
-```rate(container_network_receive_bytes_total{instance="localhost:8080"}[5m])
+```
+rate(container_network_receive_bytes_total{instance="localhost:8080"}[5m])
 ```
 ---
 
