@@ -142,7 +142,7 @@ Se configuró una alarma llamada `AlarmaNetwork` para detectar anomalías de tr�
 ![Alarma Estado](Item%20III/Alarma-5.png)
 
 *Notificación por correo:*
-![Alarma Estado](Item%20III/Notificación-Correo.png)
+![Alarma Notificación](Item%20III/Notificación-Correo.png)
 ---
 
 ## 🚀 Item IV - Observabilidad de Costos
