@@ -109,13 +109,13 @@ registry.hospital_med_supplies_remaining_gauge = Gauge(
     registry=registry
 )
 ```
+**Dashboard - Personalizado.png**
+
 ![Acción Reboot](Item%20II/Dashboard%20-%20Personalizado.png)
 
 ---
 
 ## 🚀 Item III - Monitoreo con AWS CloudWatch
-
-Para complementar el monitoreo de "Caja Blanca" (desde dentro del SO con Prometheus), se configuró un monitoreo de "Caja Negra" utilizando las herramientas nativas del hipervisor AWS CloudWatch.
 
 ### 1. Dashboard de Infraestructura
 Se importó el archivo `Item III/dashboard.json` para crear un panel de control que visualiza métricas críticas desde la perspectiva de AWS:
