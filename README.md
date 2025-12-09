@@ -128,11 +128,11 @@ El dashboard incluye:
 ![Dashboard CloudWatch](Item%20III/Dashboard%20Metricas%20-%20CloudWatch.png)
 
 ### 2. Automatización y Alarmas
-Se configuró una alarma llamada `AlarmaNetwork` para detectar anomalías de tráfico (posible ataque DDoS o error de aplicación).
+Se configuró una alarma llamada `AlarmaNetwork` para detectar anomalías de tráfico ej: posible ataque DDoS o error de aplicación.
 
-* **Condición:** `NetworkPacketsIn > 40000` (en un periodo de 5 minutos).
+* **Condición:** `NetworkPacketsIn > 40000` en un periodo de 5 minutos.
 * **Acción de Notificación:** Envío de alerta al tópico SNS.
-* **Acción de Remediación:** **Reinicio automático de la instancia (EC2 Reboot)**. Esta configuración permite recuperar el servicio automáticamente sin intervención humana ante un bloqueo por saturación de red.
+* **Acción de Remediación:** **Reinicio automático de la instancia EC2**. Esta configuración permite recuperar el servicio automáticamente sin intervención humana ante un bloqueo por saturación de red.
 
 **Evidencia de Configuración:**
 *Configuración del umbral y acción de reinicio:*
@@ -143,6 +143,7 @@ Se configuró una alarma llamada `AlarmaNetwork` para detectar anomalías de tr�
 
 *Notificación por correo:*
 ![Alarma Notificación](Item%20III/Notificación-Correo.png)
+
 ---
 
 ## 🚀 Item IV - Observabilidad de Costos
