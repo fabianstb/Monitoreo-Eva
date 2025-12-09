@@ -80,7 +80,7 @@ rate(container_network_receive_bytes_total{instance="localhost:8080"}[5m])
 
 ---
 
-##  <span style="color:blue">Item II - Métricas Personalizadas</span>
+##  Item II - Métricas Personalizadas
 
 Para demostrar la capacidad de instrumentar aplicaciones y generar métricas de negocio personalizadas, se utilizó un simulador de gestión hospitalaria en Python (`Item II/Case-3-Mod.py`).
 
@@ -109,6 +109,21 @@ registry.hospital_med_supplies_remaining_gauge = Gauge(
     registry=registry
 )
 ```
+
+**Metricas Utilizadas**
+Tiempos de espera.
+```
+sum(rate(hospital_er_wait_time_minutes_histogram_bucket[5m])) by (le)
+```
+Agotamiento de recursos.
+```
+predict_linear(hospital_med_supplies_remaining_gauge{supply_type="Masks"}[1h], 4 * 3600)
+```
+Estrés Hospitalario.
+```
+sum(rate(hospital_admissions_total[1h])) - sum(rate(hospital_discharges_total[1h]))
+```
+
 **Dashboard - Personalizado.png**
 
 ![Acción Reboot](Item%20II/Dashboard%20-%20Personalizado.png)
