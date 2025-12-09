@@ -110,7 +110,7 @@ registry.hospital_med_supplies_remaining_gauge = Gauge(
 )
 ```
 
-**Metricas Utilizadas**
+**C. Metricas Utilizadas**
 
 Tiempos de espera.
 ```
@@ -125,7 +125,7 @@ Estrés Hospitalario.
 sum(rate(hospital_admissions_total[1h])) - sum(rate(hospital_discharges_total[1h]))
 ```
 
-**Dashboard - Personalizado.png**
+**D. Dashboard - Personalizado.png**
 
 ![Acción Reboot](Item%20II/Dashboard%20-%20Personalizado.png)
 
