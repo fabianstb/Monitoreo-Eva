@@ -80,7 +80,7 @@ rate(container_network_receive_bytes_total{instance="localhost:8080"}[5m])
 
 ---
 
-##  Item II - Métricas Personalizadas
+##  <span style="color:blue">Item II - Métricas Personalizadas<span>
 
 Para demostrar la capacidad de instrumentar aplicaciones y generar métricas de negocio personalizadas, se utilizó un simulador de gestión hospitalaria en Python (`Item II/Case-3-Mod.py`).
 
